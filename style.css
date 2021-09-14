@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --cyan2: hsl(179, 47%, 51%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --background: hsl(206, 47%, 93%);
+  --radius: 10px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Karla";
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  flex: 1;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content;
+  grid-template-areas:
+    "top top"
+    "left right";
+}
+
+.primary {
+  background-color: white;
+  grid-area: top;
+  padding: 45px;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.primary-title {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.primary-subtitle {
+  color: var(--bright-yellow);
+  font-weight: 400;
+}
+
+.primary-text {
+  color: var(--grayish-blue);
+}
+
+.subscription {
+  grid-area: left;
+  background-color: var(--cyan);
+  color: var(--light-gray);
+  padding: 44px;
+  border-radius: 0px 0px 0px var(--radius);
+}
+
+.secondary-title {
+  font-weight: 700;
+}
+
+.secondary-subtitle {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.button {
+  background-color: var(--bright-yellow);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  color: var(--light-gray);
+  width: 100%;
+  padding: 15px;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.whyus {
+  grid-area: right;
+  background-color: var(--cyan2);
+  color: var(--light-gray);
+  padding: 44px;
+  border-radius: 0px 0px var(--radius);
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 3px;
+}
