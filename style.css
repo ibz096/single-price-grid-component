@@ -38,6 +38,17 @@ body {
     "left right";
 }
 
+@media only screen and (max-width: 375px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+    grid-template-areas:
+    "top"
+    "left"
+    "right";
+  }
+}
+
 .primary {
   background-color: white;
   grid-area: top;
